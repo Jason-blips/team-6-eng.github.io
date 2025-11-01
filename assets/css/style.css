@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    line-height: 1.6;
+    color: #e8e6e3;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 3px solid #ffb84d;
+}
+
+.nav {
+    margin-top: 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffb84d;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section:nth-child(even) {
+    background-color: rgba(26, 26, 46, 0.8);
+}
+
+.section:nth-child(odd) {
+    background-color: rgba(22, 33, 62, 0.8);
+}
+
+.features-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card, .team-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    color: #e8e6e3;
+}
+
+.feature-card:hover, .team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 184, 77, 0.2);
+    border-color: #ffb84d;
+}
+
+.doc-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.doc-link {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.doc-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0c0c0c 100%);
+    color: #8faed9;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 2px solid #ffb84d;
+}
+
+/* CRC Cards */
+.crc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.crc-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+    color: #e8e6e3;
+}
+
+.crc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.crc-card h3 {
+    color: #ffb84d;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 184, 77, 0.3);
+}
+
+.crc-card p {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.crc-card strong {
+    color: #ffb84d;
+}
+
+/* CRC Cards 颜色 - 深色主题优化 */
+.crc-card:nth-child(1) {
+    border-top: 4px solid #4CAF50;
+    box-shadow: 0 8px 32px rgba(76, 175, 80, 0.1);
+}
+
+.crc-card:nth-child(2) {
+    border-top: 4px solid #FF9800;
+    box-shadow: 0 8px 32px rgba(255, 152, 0, 0.1);
+}
+
+.crc-card:nth-child(3) {
+    border-top: 4px solid #2196F3;
+    box-shadow: 0 8px 32px rgba(33, 150, 243, 0.1);
+}
+
+.crc-card:nth-child(4) {
+    border-top: 4px solid #BA68C8;
+    box-shadow: 0 8px 32px rgba(186, 104, 200, 0.1);
+}
+
+.crc-card:nth-child(5) {
+    border-top: 4px solid #795548;
+    box-shadow: 0 8px 32px rgba(121, 85, 72, 0.1);
+}
+
+.crc-card:nth-child(6) {
+    border-top: 4px solid #F44336;
+    box-shadow: 0 8px 32px rgba(244, 67, 54, 0.1);
+}
+
+/* Project Docs */
+.documents-list {
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+.doc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.doc-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 184, 77, 0.2);
+    border-color: #ffb84d;
+}
+
+.doc-title {
+    font-weight: 600;
+    color: #ffb84d;
+    flex: 1;
+}
+
+.doc-link {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    margin-left: 1rem;
+    border: 1px solid transparent;
+}
+
+.doc-link:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Overview */
+#overview h2, #features h2, #documents h2 {
+    color: #ffb84d;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+#overview h3 {
+    color: #ffb84d;
+    margin: 1rem 0 0.5rem 0;
+    border-left: 3px solid #ffb84d;
+    padding-left: 1rem;
+}
+
+#overview ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+#overview li {
+    margin-bottom: 0.5rem;
+    color: #e8e6e3;
+}
+
+#overview b {
+    color: #ffb84d;
+}
+
+@media (max-width: 768px) {
+    .doc-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .doc-link {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        align-self: flex-end;
+    }
+
+    .nav a {
+        margin: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
